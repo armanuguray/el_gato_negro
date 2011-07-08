@@ -7,6 +7,7 @@
 //
 
 #import "WhiteCatAppDelegate.h"
+#import "WCGameViewController.h"
 
 @implementation WhiteCatAppDelegate
 
@@ -17,6 +18,8 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
+    gameViewController_ = [WCGameViewController new];
+    [self.window addSubview:gameViewController_.view];
     return YES;
 }
 
@@ -57,6 +60,11 @@
      Save data if appropriate.
      See also applicationDidEnterBackground:.
      */
+}
+
+- (void)dealloc 
+{
+    [super dealloc];
 }
 
 @end

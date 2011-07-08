@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WhiteCatAppDelegate : UIResponder <UIApplicationDelegate>
+@class WCGameViewController;
+
+@interface WhiteCatAppDelegate : UIResponder <UIApplicationDelegate> {
+    
+    WCGameViewController *gameViewController_;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

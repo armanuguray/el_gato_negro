@@ -20,6 +20,9 @@
 		72D644FD13ABFDBB001814C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72D644FB13ABFDBB001814C7 /* InfoPlist.strings */; };
 		72D644FF13ABFDBB001814C7 /* WhiteCatTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 72D644FE13ABFDBB001814C7 /* WhiteCatTests.h */; };
 		72D6450113ABFDBB001814C7 /* WhiteCatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D6450013ABFDBB001814C7 /* WhiteCatTests.m */; };
+		BA72AD2A13C5651700327E1B /* WCGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA72AD2913C5651700327E1B /* WCGameViewController.m */; };
+		BA72AD2D13C566F300327E1B /* WCGameView.m in Sources */ = {isa = PBXBuildFile; fileRef = BA72AD2C13C566F300327E1B /* WCGameView.m */; };
+		BA72AD2F13C6B94A00327E1B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA72AD2E13C6B94A00327E1B /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,11 @@
 		72D644FC13ABFDBB001814C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		72D644FE13ABFDBB001814C7 /* WhiteCatTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WhiteCatTests.h; sourceTree = "<group>"; };
 		72D6450013ABFDBB001814C7 /* WhiteCatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteCatTests.m; sourceTree = "<group>"; };
+		BA72AD2813C5651700327E1B /* WCGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCGameViewController.h; sourceTree = "<group>"; };
+		BA72AD2913C5651700327E1B /* WCGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCGameViewController.m; sourceTree = "<group>"; };
+		BA72AD2B13C566F300327E1B /* WCGameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCGameView.h; sourceTree = "<group>"; };
+		BA72AD2C13C566F300327E1B /* WCGameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCGameView.m; sourceTree = "<group>"; };
+		BA72AD2E13C6B94A00327E1B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA72AD2F13C6B94A00327E1B /* QuartzCore.framework in Frameworks */,
 				72D644DA13ABFDBB001814C7 /* UIKit.framework in Frameworks */,
 				72D644DC13ABFDBB001814C7 /* Foundation.framework in Frameworks */,
 				72D644DE13ABFDBB001814C7 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +88,7 @@
 		72D644CA13ABFDB1001814C7 = {
 			isa = PBXGroup;
 			children = (
+				BA72AD2E13C6B94A00327E1B /* QuartzCore.framework */,
 				72D644DF13ABFDBB001814C7 /* WhiteCat */,
 				72D644F813ABFDBB001814C7 /* WhiteCatTests */,
 				72D644D813ABFDBB001814C7 /* Frameworks */,
@@ -109,6 +119,7 @@
 		72D644DF13ABFDBB001814C7 /* WhiteCat */ = {
 			isa = PBXGroup;
 			children = (
+				BA72AD2513C5651700327E1B /* Classes */,
 				72D644E813ABFDBB001814C7 /* WhiteCatAppDelegate.h */,
 				72D644E913ABFDBB001814C7 /* WhiteCatAppDelegate.m */,
 				72D644E013ABFDBB001814C7 /* Supporting Files */,
@@ -144,6 +155,33 @@
 				72D644FB13ABFDBB001814C7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BA72AD2513C5651700327E1B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BA72AD2613C5651700327E1B /* Game */,
+				BA72AD2713C5651700327E1B /* UI */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BA72AD2613C5651700327E1B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		BA72AD2713C5651700327E1B /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BA72AD2813C5651700327E1B /* WCGameViewController.h */,
+				BA72AD2913C5651700327E1B /* WCGameViewController.m */,
+				BA72AD2B13C566F300327E1B /* WCGameView.h */,
+				BA72AD2C13C566F300327E1B /* WCGameView.m */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +289,8 @@
 			files = (
 				72D644E613ABFDBB001814C7 /* main.m in Sources */,
 				72D644EA13ABFDBB001814C7 /* WhiteCatAppDelegate.m in Sources */,
+				BA72AD2A13C5651700327E1B /* WCGameViewController.m in Sources */,
+				BA72AD2D13C566F300327E1B /* WCGameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,7 +337,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -323,7 +363,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -346,6 +386,7 @@
 				GCC_PREFIX_HEADER = "WhiteCat/WhiteCat-Prefix.pch";
 				INFOPLIST_FILE = "WhiteCat/WhiteCat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -357,6 +398,7 @@
 				GCC_PREFIX_HEADER = "WhiteCat/WhiteCat-Prefix.pch";
 				INFOPLIST_FILE = "WhiteCat/WhiteCat-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -414,6 +456,7 @@
 				72D6450613ABFDBB001814C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72D6450713ABFDBB001814C7 /* Build configuration list for PBXNativeTarget "WhiteCatTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +465,7 @@
 				72D6450913ABFDBB001814C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
